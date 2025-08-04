@@ -7,9 +7,26 @@ un cursor es un mecanismo que permite a las aplicaciones recorrer y procesar los
 individual, fila por fila. 
 Funciona como un ITERADOR sobre el conjunto de resultados, permitiendo acceder y manipular los datos de manera secuencial, en lugar de 
 recibir todos los resultados de golpe
+
+El cursos hace los cambios, mientras que la conexion acepta (commit) esos cambios
 ---------- 1.1 Tiene alguna ventaja usar cursor?
 
 ------- 2. Por que hay que cerrar las conexiones de los objetos de la db y cerrar la conexion de la db en general?
 ------- 3. Cual es la diferencia entre ejecutar desde el cursor y desde la conexion?
-------- 4. Que pasaria si no se hace commit del query?
+------- 4. Que pasaria si no se hace commit del query? Y porque se hace el commit en la conexion?
 ------- 5. Entiendo lo que es un query pero que tipos de queries existen?
+
+
+### NOTES:
+* en SQL existen los siguientes tipos de datos: Interger, Real, Text, Blob y Null
+        Similitudes con Python:
+        - Integer --> int
+        - Real --> float
+        - text --> string
+        - Blob --> treated as bytes
+        - Null --> paired with None
+
+* Metodo EXECUTE
+    - .execute 
+    - .executemany
+    - .executescript --> used to run a SQL script (Se ejecute el script como un string no como un archivo, ejemplo: desde notepad)
