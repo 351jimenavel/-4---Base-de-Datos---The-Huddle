@@ -1,0 +1,15 @@
+# v1
+(!) este archivo contiene tanto notas de las practicas como preguntas que se me van ocurriendo durante las mismas.
+Las preguntas se iran respondiendo a lo largo de las practicas e investigaciones.
+
+------- 1. cursor. QUE ES? 
+un cursor es un mecanismo que permite a las aplicaciones recorrer y procesar los resultados de una consulta SQL de forma 
+individual, fila por fila. 
+Funciona como un ITERADOR sobre el conjunto de resultados, permitiendo acceder y manipular los datos de manera secuencial, en lugar de 
+recibir todos los resultados de golpe
+---------- 1.1 Tiene alguna ventaja usar cursor?
+
+------- 2. Por que hay que cerrar las conexiones de los objetos de la db y cerrar la conexion de la db en general?
+------- 3. Cual es la diferencia entre ejecutar desde el cursor y desde la conexion?
+------- 4. Que pasaria si no se hace commit del query?
+------- 5. Entiendo lo que es un query pero que tipos de queries existen?
