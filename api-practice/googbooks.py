@@ -46,7 +46,7 @@ def obtener_autor_por_titulo(titulo):
         url_request= requests.get(url_libro)
         respuesta = url_request.json()
 
-        # Luego de realizar el testeo este bloque de codigo me di cuenta de que la API devolvia el autor del primer libro que encontraba
+        # Luego de realizar el testeo de este bloque de codigo me di cuenta de que la API devolvia el autor del primer libro que encontraba
         ## teniendo en cuenta de que diferentes autores pueden tener libros con el mismo titulo, tengo que solucionarlo
         ### ACLARACION: ESTA NO ES AUN LA SOLUCION
         if respuesta['items']:
@@ -81,7 +81,7 @@ print(obtener_autor_por_titulo("Tipping the Velvet"))
 '''
 ####################
 # Parte del testeo 3. Extraer todo los autores + guardarlos en un json (proximamente)
-'''contador = 0
+contador = 0
 for libro in libros:
     contador +=1
     titulo = libro['Titulo']
@@ -103,6 +103,6 @@ with open('autores_googlebooks.json', 'r', encoding='utf-8') as f:
     print(datos[0])  # Validar estructura
 
 # Abrir el archivo si estás en Windows
-os.startfile('autores_googlebooks.json')'''
+os.startfile('autores_googlebooks.json')
 
 ####################
