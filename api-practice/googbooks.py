@@ -47,23 +47,38 @@ def obtener_autor_por_titulo(titulo):
         url_request= requests.get(url_libro)
         respuesta = url_request.json()
 
+        # Luego de realizar el testeo este bloque de codigo me di cuenta de que la API devolvia el autor del primer libro que encontraba
+        ## teniendo en cuenta de que diferentes autores pueden tener libros con el mismo titulo, tengo que solucionarlo
         if respuesta['items']:
             autores = respuesta['items'][0]['volumeInfo'].get('authors',[])       # get es un metodo de diccionario que tiene la siguiente sintaxis --> 'dictionary.get(keyname, value)'
             return autores
         else:
             return ['Desconocido']
-
+            
     except Exception as e:
         return [str(e)]
-    
+
+'''
 for libro in libros[:3]:  # Solo los 3 primeros
     titulo = libro['Titulo']
     autores = obtener_autor_por_titulo(titulo)
     libro['Autores'] = autores
     print(f"[yes!] {titulo} --> {autores}")
+'''
 
 ####################
+'''
+OUTPUT:
+[yes!] A Light in the Attic --> ['Marie Gibson']
+[yes!] Tipping the Velvet --> ['Sarah Waters']
+[yes!] Soumission --> ['Michel Houellebecq']
 
+'''
+''' Testeo de libros varios (ej: si devuelve mas de 1 autor en caso de tenerlo)  ✅ 
+print(obtener_autor_por_titulo("Everydata: The Misinformation Hidden in the Little Data You Consume Every Day"))
+print(obtener_autor_por_titulo("Reskilling America: Learning to Labor in the Twenty-First Century"))
+print(obtener_autor_por_titulo("Tipping the Velvet"))
+'''
 ####################
 # Parte del testeo 3. Extraer todo los autores + guardarlos en un json (proximamente)
 '''contador = 0
