@@ -3,7 +3,6 @@ import time
 import requests
 import json
 
-
 with open('libros_scrapeados.json', 'r', encoding='utf-8') as f:
     libros = json.load(f)
 
@@ -49,6 +48,7 @@ def obtener_autor_por_titulo(titulo):
 
         # Luego de realizar el testeo este bloque de codigo me di cuenta de que la API devolvia el autor del primer libro que encontraba
         ## teniendo en cuenta de que diferentes autores pueden tener libros con el mismo titulo, tengo que solucionarlo
+        ### ACLARACION: ESTA NO ES AUN LA SOLUCION
         if respuesta['items']:
             autores = respuesta['items'][0]['volumeInfo'].get('authors',[])       # get es un metodo de diccionario que tiene la siguiente sintaxis --> 'dictionary.get(keyname, value)'
             return autores
