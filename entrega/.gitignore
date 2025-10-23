@@ -1,0 +1,10 @@
+# Bases de datos
+*.db
+*.sqlite
+*.sqlite3
+
+# Python típicos
+__pycache__/
+*.pyc
+.env
+.env.*
