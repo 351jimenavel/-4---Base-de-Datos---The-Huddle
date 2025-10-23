@@ -72,10 +72,10 @@ Los resultados se guardan en archivos JSON separados para mantener independencia
 
 Salida esperada: `autores_googlebooks.json`
 
-#### 5️⃣ Base de Datos — abrir el notebook 3-books-database.ipynb
+#### 5️⃣ Base de Datos — abrir el notebook `3-books-database.ipynb`
 Crea y puebla `books_data.db` (relaciones muchos-a-muchos).
 
-#### 6️⃣ Consultas/Análisis — ejecutar 4-queries.ipynb
+#### 6️⃣ Consultas/Análisis — ejecutar `4-queries.ipynb`
 Contiene consultas, comparaciones con/sin índices y conclusiones.
 
 ---
