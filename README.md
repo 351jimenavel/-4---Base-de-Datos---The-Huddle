@@ -61,6 +61,7 @@ Salida esperada: `libros_scrapeados.json`
 
 #### 4️⃣ Enriquecer los datos con APIs externas
 - Opción A: Ejecutar la versión con Open Library dentro de api-practice (oplib.py)
+
 Salida esperada: `autores_extraidos_openlibrary.json`
 
 - Opción B: Ejecutar la versión final con Google Books (2-apigooglebooks.py)
@@ -68,6 +69,7 @@ Salida esperada: `autores_extraidos_openlibrary.json`
 python 2-apigooglebooks.py
 ```
 Los resultados se guardan en archivos JSON separados para mantener independencia entre fuentes.
+
 Salida esperada: `autores_googlebooks.json`
 
 #### 5️⃣ Base de Datos — abrir el notebook 3-books-database.ipynb
